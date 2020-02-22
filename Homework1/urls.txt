@@ -1,0 +1,4 @@
+https://deezerdevs-deezer.p.rapidapi.com/search?q=
+http://numbersapi.com/random?min=0&max=
+http://www.songsterr.com/a/ra/songs.json?pattern=
+http://www.songsterr.com/a/wa/song?id=

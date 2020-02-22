@@ -1,0 +1,3 @@
+Facem request la 2 API-uri. Agregam intr-o forma oarecare rezultatul, si apoi trimitem la un al treilea API.
+
+Ex: Extrag poze din Facebook (1) si Instagram (2), apoi le urcam pe Google Drive (3)
