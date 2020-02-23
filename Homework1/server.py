@@ -34,8 +34,8 @@ def request_to_api():
             number_json = number.json()
             song_index = number_json['number']
             result_1 = "We chose song number " + str(song_index) + \
-                     " (" + songs_json['data'][song_index]['title'] + ") because " + number_json['text']
-            songs_from_songsterr = requests.get(data[0][2] + songs_json['data'][song_index]['title'])
+                     " (" + songs_json['data'][song_index]['title_short'] + ") because " + number_json['text']
+            songs_from_songsterr = requests.get(data[0][2] + songs_json['data'][song_index]['title_short'])
             songs_from_songsterr_json = songs_from_songsterr.json()
             tab_id = None
             for elem in songs_from_songsterr_json:
