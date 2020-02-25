@@ -1,0 +1,624 @@
+{
+    "calls": [
+        {
+            "url": "http://www.songsterr.com/a/ra/songs.json?pattern=Mysteria",
+            "argument": "Mysteria",
+            "response": [
+                {
+                    "id": 396999,
+                    "type": "Song",
+                    "title": "Mysteria Live",
+                    "artist": {
+                        "id": 2165,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Edguy",
+                        "useThePrefix": false,
+                        "name": "Edguy"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER"
+                    ]
+                },
+                {
+                    "id": 30005,
+                    "type": "Song",
+                    "title": "Arcane Lifeforce Mysteria",
+                    "artist": {
+                        "id": 547,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Dimmu Borgir",
+                        "useThePrefix": false,
+                        "name": "Dimmu Borgir"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER",
+                        "TEXT_GUITAR_TAB",
+                        "TEXT_BASS_TAB"
+                    ]
+                },
+                {
+                    "id": 433811,
+                    "type": "Song",
+                    "title": "Demo 1",
+                    "artist": {
+                        "id": 56133,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Mysteria",
+                        "useThePrefix": false,
+                        "name": "Mysteria"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER"
+                    ]
+                },
+                {
+                    "id": 7121,
+                    "type": "Song",
+                    "title": "Mysteria",
+                    "artist": {
+                        "id": 2165,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Edguy",
+                        "useThePrefix": false,
+                        "name": "Edguy"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER",
+                        "TEXT_GUITAR_TAB"
+                    ]
+                }
+            ],
+            "latency": "286.1809730529785 ms",
+            "status_code": 200
+        },
+        {
+            "url": "http://www.songsterr.com/a/ra/songs.json?pattern=The Asylum",
+            "argument": "The Asylum",
+            "response": [
+                {
+                    "id": 58922,
+                    "type": "Song",
+                    "title": "Asylum Of Glass",
+                    "artist": {
+                        "id": 544,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Buckethead",
+                        "useThePrefix": false,
+                        "name": "Buckethead"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER",
+                        "TEXT_GUITAR_TAB"
+                    ]
+                },
+                {
+                    "id": 55368,
+                    "type": "Song",
+                    "title": "Runaway Train",
+                    "artist": {
+                        "id": 11120,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Soul Asylum",
+                        "useThePrefix": false,
+                        "name": "Soul Asylum"
+                    },
+                    "chordsPresent": true,
+                    "tabTypes": [
+                        "PLAYER",
+                        "TEXT_GUITAR_TAB",
+                        "CHORDS",
+                        "TEXT_BASS_TAB"
+                    ]
+                },
+                {
+                    "id": 395316,
+                    "type": "Song",
+                    "title": "Somebody To Shove",
+                    "artist": {
+                        "id": 11120,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Soul Asylum",
+                        "useThePrefix": false,
+                        "name": "Soul Asylum"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER"
+                    ]
+                },
+                {
+                    "id": 269607,
+                    "type": "Song",
+                    "title": "Rogue World Asylum",
+                    "artist": {
+                        "id": 3882,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Machinae Supremacy",
+                        "useThePrefix": false,
+                        "name": "Machinae Supremacy"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER"
+                    ]
+                },
+                {
+                    "id": 423456,
+                    "type": "Song",
+                    "title": "Asylum Dance",
+                    "artist": {
+                        "id": 5185,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Soilwork",
+                        "useThePrefix": false,
+                        "name": "Soilwork"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER"
+                    ]
+                },
+                {
+                    "id": 33733,
+                    "type": "Song",
+                    "title": "The Asylum",
+                    "artist": {
+                        "id": 2165,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Edguy",
+                        "useThePrefix": false,
+                        "name": "Edguy"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER"
+                    ]
+                },
+                {
+                    "id": 88516,
+                    "type": "Song",
+                    "title": "Instrumental Asylum",
+                    "artist": {
+                        "id": 8392,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Lifelover",
+                        "useThePrefix": false,
+                        "name": "Lifelover"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER"
+                    ]
+                },
+                {
+                    "id": 421055,
+                    "type": "Song",
+                    "title": "Hotel Asylum",
+                    "artist": {
+                        "id": 10361,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Mourning Widows",
+                        "useThePrefix": false,
+                        "name": "Mourning Widows"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER"
+                    ]
+                },
+                {
+                    "id": 5902,
+                    "type": "Song",
+                    "title": "Asylum",
+                    "artist": {
+                        "id": 1736,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Demon n'Angel",
+                        "useThePrefix": false,
+                        "name": "Demon n'Angel"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER"
+                    ]
+                },
+                {
+                    "id": 44453,
+                    "type": "Song",
+                    "title": "War",
+                    "artist": {
+                        "id": 8762,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Victims Of The Asylum",
+                        "useThePrefix": false,
+                        "name": "Victims Of The Asylum"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER"
+                    ]
+                },
+                {
+                    "id": 46644,
+                    "type": "Song",
+                    "title": "Aftermath",
+                    "artist": {
+                        "id": 9967,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "4th Street Asylum",
+                        "useThePrefix": false,
+                        "name": "4th Street Asylum"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER"
+                    ]
+                },
+                {
+                    "id": 55205,
+                    "type": "Song",
+                    "title": "Asylum",
+                    "artist": {
+                        "id": 5289,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Supertramp",
+                        "useThePrefix": false,
+                        "name": "Supertramp"
+                    },
+                    "chordsPresent": true,
+                    "tabTypes": [
+                        "PLAYER",
+                        "CHORDS"
+                    ]
+                },
+                {
+                    "id": 56017,
+                    "type": "Song",
+                    "title": "Lunatic Asylum",
+                    "artist": {
+                        "id": 9955,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Humpers",
+                        "useThePrefix": true,
+                        "name": "The Humpers"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER"
+                    ]
+                },
+                {
+                    "id": 381068,
+                    "type": "Song",
+                    "title": "Embrace The Pain",
+                    "artist": {
+                        "id": 49188,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Back Door Asylum",
+                        "useThePrefix": false,
+                        "name": "Back Door Asylum"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER"
+                    ]
+                },
+                {
+                    "id": 388168,
+                    "type": "Song",
+                    "title": "Never Really Been",
+                    "artist": {
+                        "id": 11120,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Soul Asylum",
+                        "useThePrefix": false,
+                        "name": "Soul Asylum"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER"
+                    ]
+                },
+                {
+                    "id": 390048,
+                    "type": "Song",
+                    "title": "Rnuaway Train",
+                    "artist": {
+                        "id": 11120,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Soul Asylum",
+                        "useThePrefix": false,
+                        "name": "Soul Asylum"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER"
+                    ]
+                },
+                {
+                    "id": 392437,
+                    "type": "Song",
+                    "title": "Embrace The Pain",
+                    "artist": {
+                        "id": 51713,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Back Door To Asylum",
+                        "useThePrefix": false,
+                        "name": "Back Door To Asylum"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER"
+                    ]
+                },
+                {
+                    "id": 455223,
+                    "type": "Song",
+                    "title": "Asylum",
+                    "artist": {
+                        "id": 57052,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Guilty",
+                        "useThePrefix": false,
+                        "name": "Guilty"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER"
+                    ]
+                },
+                {
+                    "id": 393415,
+                    "type": "Song",
+                    "title": "Lick 62 Asylum",
+                    "artist": {
+                        "id": 51123,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Pox",
+                        "useThePrefix": false,
+                        "name": "Pox"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER"
+                    ]
+                },
+                {
+                    "id": 393416,
+                    "type": "Song",
+                    "title": "Hopes Up",
+                    "artist": {
+                        "id": 11120,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Soul Asylum",
+                        "useThePrefix": false,
+                        "name": "Soul Asylum"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER"
+                    ]
+                },
+                {
+                    "id": 393435,
+                    "type": "Song",
+                    "title": "Misery",
+                    "artist": {
+                        "id": 11120,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Soul Asylum",
+                        "useThePrefix": false,
+                        "name": "Soul Asylum"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER"
+                    ]
+                },
+                {
+                    "id": 393437,
+                    "type": "Song",
+                    "title": "Promises Broken",
+                    "artist": {
+                        "id": 11120,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Soul Asylum",
+                        "useThePrefix": false,
+                        "name": "Soul Asylum"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER"
+                    ]
+                },
+                {
+                    "id": 393463,
+                    "type": "Song",
+                    "title": "To My Own Devices",
+                    "artist": {
+                        "id": 11120,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Soul Asylum",
+                        "useThePrefix": false,
+                        "name": "Soul Asylum"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER"
+                    ]
+                },
+                {
+                    "id": 393502,
+                    "type": "Song",
+                    "title": "Bittersweetheart",
+                    "artist": {
+                        "id": 11120,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Soul Asylum",
+                        "useThePrefix": false,
+                        "name": "Soul Asylum"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER"
+                    ]
+                },
+                {
+                    "id": 393504,
+                    "type": "Song",
+                    "title": "Just Like Anyone",
+                    "artist": {
+                        "id": 11120,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Soul Asylum",
+                        "useThePrefix": false,
+                        "name": "Soul Asylum"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER"
+                    ]
+                },
+                {
+                    "id": 393505,
+                    "type": "Song",
+                    "title": "Tell Me Whan",
+                    "artist": {
+                        "id": 11120,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Soul Asylum",
+                        "useThePrefix": false,
+                        "name": "Soul Asylum"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER"
+                    ]
+                },
+                {
+                    "id": 61664,
+                    "type": "Song",
+                    "title": "Asylum",
+                    "artist": {
+                        "id": 205,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Disturbed",
+                        "useThePrefix": false,
+                        "name": "Disturbed"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER",
+                        "TEXT_GUITAR_TAB",
+                        "TEXT_BASS_TAB"
+                    ]
+                },
+                {
+                    "id": 412742,
+                    "type": "Song",
+                    "title": "Julia",
+                    "artist": {
+                        "id": 39798,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Asylum Party",
+                        "useThePrefix": false,
+                        "name": "Asylum Party"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER"
+                    ]
+                },
+                {
+                    "id": 58543,
+                    "type": "Song",
+                    "title": "Asylum",
+                    "artist": {
+                        "id": 235,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Yngwie Malmsteen",
+                        "useThePrefix": false,
+                        "name": "Yngwie Malmsteen"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER"
+                    ]
+                },
+                {
+                    "id": 1886,
+                    "type": "Song",
+                    "title": "Flowers On The Wreath",
+                    "artist": {
+                        "id": 673,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Asylum",
+                        "useThePrefix": false,
+                        "name": "Asylum"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER"
+                    ]
+                },
+                {
+                    "id": 1555,
+                    "type": "Song",
+                    "title": "Maybe",
+                    "artist": {
+                        "id": 673,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Asylum",
+                        "useThePrefix": false,
+                        "name": "Asylum"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER"
+                    ]
+                },
+                {
+                    "id": 28616,
+                    "type": "Song",
+                    "title": "Tortured Soul Asylum",
+                    "artist": {
+                        "id": 1405,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Cradle Of Filth",
+                        "useThePrefix": false,
+                        "name": "Cradle Of Filth"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER",
+                        "TEXT_GUITAR_TAB",
+                        "TEXT_BASS_TAB"
+                    ]
+                },
+                {
+                    "id": 433767,
+                    "type": "Song",
+                    "title": "Asylum",
+                    "artist": {
+                        "id": 871,
+                        "type": "Artist",
+                        "nameWithoutThePrefix": "Black Dahlia Murder",
+                        "useThePrefix": true,
+                        "name": "The Black Dahlia Murder"
+                    },
+                    "chordsPresent": false,
+                    "tabTypes": [
+                        "PLAYER"
+                    ]
+                }
+            ],
+            "latency": "311.0663890838623 ms",
+            "status_code": 200
+        }
+    ]
+}
