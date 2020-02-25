@@ -5,9 +5,9 @@ def form_new_log(url, param, response, latency, status_code):
     new_log = dict()
     new_log['url'] = url + param
     new_log['argument'] = param
-    new_log['response'] = response
     new_log['latency'] = str(latency) + ' ms'
     new_log['status_code'] = status_code
+    new_log['response'] = response
     return new_log
 
 

@@ -20,7 +20,10 @@ class Server(BaseHTTPRequestHandler):
                 else:
                     artist = None
                 if artist is not None:
-                    result_1, result_2 = request_controller.request_to_apis(artist)
+                    result_1, result_2, final_1, final_2, final_3 = request_controller.request_to_apis(artist)
+                    print(final_1)
+                    print(final_2)
+                    print(final_3)
                     split_for_result = file_to_open.split('<!-- -->')
                     file_to_open = ''
                     for index, elem in enumerate(split_for_result):

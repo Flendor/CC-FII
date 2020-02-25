@@ -8,14 +8,15 @@ def request_to_deezer(artist, url, header_name, header_value):
     start_time = time.time()
     try:
         songs = requests.get(url + artist, headers={header_name: header_value})
+        final_time = (time.time() - start_time) * 1000
         songs_json = songs.json()
-        return songs_json
+        return songs_json, final_time
     except Exception as e:
+        final_time = (time.time() - start_time) * 1000
         songs_json = "Request Failed"
         print("Deezer request failed!")
         print(e)
     finally:
-        final_time = (time.time() - start_time) * 1000
         log_deezer(url, artist, songs_json, final_time, songs.status_code)
 
 
@@ -23,14 +24,15 @@ def request_to_random(url, max_random_value, header_name, header_value):
     start_time = time.time()
     try:
         number = requests.get(url + max_random_value, headers={header_name: header_value})
+        final_time = (time.time() - start_time) * 1000
         number_json = number.json()
-        return number_json
+        return number_json, final_time
     except Exception as e:
+        final_time = (time.time() - start_time) * 1000
         number_json = "Request Failed"
         print("NumbersApi request failed!")
         print(e)
     finally:
-        final_time = (time.time() - start_time) * 1000
         log_random(url, max_random_value, number_json, final_time, number.status_code)
 
 
@@ -38,14 +40,15 @@ def request_to_songsterr(url, song_title):
     start_time = time.time()
     try:
         songs_from_songsterr = requests.get(url + song_title)
+        final_time = (time.time() - start_time) * 1000
         songs_from_songsterr_json = songs_from_songsterr.json()
-        return songs_from_songsterr_json
+        return songs_from_songsterr_json, final_time
     except Exception as e:
+        final_time = (time.time() - start_time) * 1000
         songs_from_songsterr_json = "Request Failed"
         print("Songsterr request failed!")
         print(e)
     finally:
-        final_time = (time.time() - start_time) * 1000
         log_songsterr(url, song_title, songs_from_songsterr_json, final_time, songs_from_songsterr.status_code)
 
 
@@ -56,14 +59,14 @@ class RequestController:
 
     def request_to_apis(self, artist):
         try:
-            songs_json = request_to_deezer(artist, self.data[0][0], self.data[2][0][0], self.data[2][0][1])
-            number_json = request_to_random(self.data[0][1], str(len(songs_json['data']) - 1),
+            songs_json, final_deezer_time = request_to_deezer(artist, self.data[0][0], self.data[2][0][0], self.data[2][0][1])
+            number_json, final_random_time = request_to_random(self.data[0][1], str(len(songs_json['data']) - 1),
                                             self.data[2][1][0], self.data[2][1][1])
             song_index = number_json['number']
             result_1 = "We chose song number " + str(song_index) + \
                        " (" + songs_json['data'][song_index]['title_short'] + \
                        ") by <b>" + artist.upper().replace('+', ' ') + "</b> because " + number_json['text']
-            songsterr_json = request_to_songsterr(self.data[0][2], songs_json['data'][song_index]['title_short'])
+            songsterr_json, final_songsterr_time = request_to_songsterr(self.data[0][2], songs_json['data'][song_index]['title_short'])
             tab_id = None
             for elem in songsterr_json:
                 if elem['artist']['name'].lower() == artist.lower() and \
@@ -73,7 +76,7 @@ class RequestController:
                 result_2 = None
             else:
                 result_2 = self.data[1][0] + str(tab_id)
-            return result_1, result_2
+            return result_1, result_2, final_deezer_time, final_random_time, final_songsterr_time
         except Exception as e:
             print("Requests failed")
             print(e)
