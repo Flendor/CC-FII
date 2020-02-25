@@ -1,4 +1,0 @@
-X-RapidAPI-Key
-4f25bbcf80msh40495aa6ab1a78ep171657jsnff9458ea7e31
-Content-Type
-application/json
