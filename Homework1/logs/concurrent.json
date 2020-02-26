@@ -1,0 +1,25 @@
+{
+    "calls": [
+        {
+            "total_requests": 100,
+            "max_workers": 10,
+            "min_latency": "2156.700372695923 ms",
+            "max_latency": "40063.10176849365 ms",
+            "avg_latency": "11934.26869392395 ms"
+        },
+        {
+            "total_requests": 100,
+            "max_workers": 20,
+            "min_latency": "2266.958713531494 ms",
+            "max_latency": "104480.06248474121 ms",
+            "avg_latency": "14980.042579381363 ms"
+        },
+        {
+            "total_requests": 500,
+            "max_workers": 50,
+            "min_latency": "2458.322763442993 ms",
+            "max_latency": "447335.91771125793 ms",
+            "avg_latency": "32129.901309013367 ms"
+        }
+    ]
+}

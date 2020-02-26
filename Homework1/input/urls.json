@@ -1,7 +1,7 @@
 {
 	"api_urls" : [
 		"https://deezerdevs-deezer.p.rapidapi.com/search?q=",
-		"http://numbersapi.com/random?min=0&max=",
+		"https://love-calculator.p.rapidapi.com/getPercentage?fname=Matei&sname=",
 		"http://www.songsterr.com/a/ra/songs.json?pattern="
 	],
 	"extra_urls" : [

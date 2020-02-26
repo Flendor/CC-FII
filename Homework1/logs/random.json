@@ -1,27 +1,27 @@
 {
     "calls": [
         {
-            "url": "http://numbersapi.com/random?min=0&max=24",
-            "argument": "24",
-            "latency": "2799.5846271514893 ms",
+            "url": "https://love-calculator.p.rapidapi.com/getPercentage?fname=Matei&sname=iron+maiden",
+            "argument": "iron+maiden",
+            "latency": "426.47576332092285 ms",
             "status_code": 200,
             "response": {
-                "text": "12 is the number of keys in any standard digital telephone (1 through 9, 0, * and #).",
-                "number": 12,
-                "found": true,
-                "type": "trivia"
+                "fname": "Matei",
+                "sname": "iron maiden",
+                "percentage": "99",
+                "result": "Congratulations! Good choice"
             }
         },
         {
-            "url": "http://numbersapi.com/random?min=0&max=24",
-            "argument": "24",
-            "latency": "718.7557220458984 ms",
+            "url": "https://love-calculator.p.rapidapi.com/getPercentage?fname=Matei&sname=pink+floyd",
+            "argument": "pink+floyd",
+            "latency": "458.83727073669434 ms",
             "status_code": 200,
             "response": {
-                "text": "8 is the number of bits in a byte.",
-                "number": 8,
-                "found": true,
-                "type": "trivia"
+                "fname": "Matei",
+                "sname": "pink floyd",
+                "percentage": "53",
+                "result": "All the best!"
             }
         }
     ]
