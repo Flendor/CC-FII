@@ -1,262 +1,41 @@
 {
     "calls": [
         {
-            "url": "http://www.songsterr.com/a/ra/songs.json?pattern=Wasting Love",
-            "argument": "Wasting Love",
-            "latency": "394.1514492034912 ms",
+            "url": "http://www.songsterr.com/a/ra/songs.json?pattern=How Can I Go On",
+            "argument": "How Can I Go On",
+            "latency": "1233.6313724517822 ms",
             "status_code": 200,
-            "response": [
-                {
-                    "id": 10027,
-                    "type": "Song",
-                    "title": "Wasting Love",
-                    "artist": {
-                        "id": 139,
-                        "type": "Artist",
-                        "nameWithoutThePrefix": "Iron Maiden",
-                        "useThePrefix": false,
-                        "name": "Iron Maiden"
-                    },
-                    "chordsPresent": false,
-                    "tabTypes": [
-                        "PLAYER",
-                        "TEXT_GUITAR_TAB",
-                        "TEXT_BASS_TAB"
-                    ]
-                },
-                {
-                    "id": 445124,
-                    "type": "Song",
-                    "title": "Wasting Love(VersÃ£o Cifra Club)",
-                    "artist": {
-                        "id": 139,
-                        "type": "Artist",
-                        "nameWithoutThePrefix": "Iron Maiden",
-                        "useThePrefix": false,
-                        "name": "Iron Maiden"
-                    },
-                    "chordsPresent": false,
-                    "tabTypes": [
-                        "PLAYER"
-                    ]
-                }
-            ]
+            "response": []
         },
         {
-            "url": "http://www.songsterr.com/a/ra/songs.json?pattern=Comfortably Numb",
-            "argument": "Comfortably Numb",
-            "latency": "376.57999992370605 ms",
+            "url": "http://www.songsterr.com/a/ra/songs.json?pattern=Acquainted",
+            "argument": "Acquainted",
+            "latency": "313.26889991760254 ms",
+            "status_code": 200,
+            "response": []
+        },
+        {
+            "url": "http://www.songsterr.com/a/ra/songs.json?pattern=The Unforgiven III",
+            "argument": "The Unforgiven III",
+            "latency": "701.5745639801025 ms",
             "status_code": 200,
             "response": [
                 {
-                    "id": 271,
+                    "id": 22305,
                     "type": "Song",
-                    "title": "Comfortably Numb",
+                    "title": "The Unforgiven III",
                     "artist": {
-                        "id": 79,
+                        "id": 20,
                         "type": "Artist",
-                        "nameWithoutThePrefix": "Pink Floyd",
+                        "nameWithoutThePrefix": "Metallica",
                         "useThePrefix": false,
-                        "name": "Pink Floyd"
+                        "name": "Metallica"
                     },
                     "chordsPresent": true,
                     "tabTypes": [
                         "PLAYER",
                         "TEXT_GUITAR_TAB",
-                        "CHORDS",
-                        "TEXT_BASS_TAB"
-                    ]
-                },
-                {
-                    "id": 78008,
-                    "type": "Song",
-                    "title": "Comfortably Numb (Live Solo) [Pulse]",
-                    "artist": {
-                        "id": 79,
-                        "type": "Artist",
-                        "nameWithoutThePrefix": "Pink Floyd",
-                        "useThePrefix": false,
-                        "name": "Pink Floyd"
-                    },
-                    "chordsPresent": false,
-                    "tabTypes": [
-                        "PLAYER"
-                    ]
-                },
-                {
-                    "id": 381222,
-                    "type": "Song",
-                    "title": "Comfortably Numb (Complete Version)",
-                    "artist": {
-                        "id": 79,
-                        "type": "Artist",
-                        "nameWithoutThePrefix": "Pink Floyd",
-                        "useThePrefix": false,
-                        "name": "Pink Floyd"
-                    },
-                    "chordsPresent": false,
-                    "tabTypes": [
-                        "PLAYER"
-                    ]
-                },
-                {
-                    "id": 394870,
-                    "type": "Song",
-                    "title": "Comfortably Numb(Gilmourtruetab)",
-                    "artist": {
-                        "id": 79,
-                        "type": "Artist",
-                        "nameWithoutThePrefix": "Pink Floyd",
-                        "useThePrefix": false,
-                        "name": "Pink Floyd"
-                    },
-                    "chordsPresent": false,
-                    "tabTypes": [
-                        "PLAYER"
-                    ]
-                },
-                {
-                    "id": 388919,
-                    "type": "Song",
-                    "title": "Comfortably Numb (Bass Solo)",
-                    "artist": {
-                        "id": 79,
-                        "type": "Artist",
-                        "nameWithoutThePrefix": "Pink Floyd",
-                        "useThePrefix": false,
-                        "name": "Pink Floyd"
-                    },
-                    "chordsPresent": false,
-                    "tabTypes": [
-                        "PLAYER"
-                    ]
-                },
-                {
-                    "id": 446450,
-                    "type": "Song",
-                    "title": "Comfortably Numb Live",
-                    "artist": {
-                        "id": 79,
-                        "type": "Artist",
-                        "nameWithoutThePrefix": "Pink Floyd",
-                        "useThePrefix": false,
-                        "name": "Pink Floyd"
-                    },
-                    "chordsPresent": false,
-                    "tabTypes": [
-                        "PLAYER"
-                    ]
-                },
-                {
-                    "id": 91679,
-                    "type": "Song",
-                    "title": "(Pink Floyd) Comfortably Numb (Acoustic)",
-                    "artist": {
-                        "id": 18099,
-                        "type": "Artist",
-                        "nameWithoutThePrefix": "Ronald Bazán",
-                        "useThePrefix": false,
-                        "name": "Ronald Bazán"
-                    },
-                    "chordsPresent": false,
-                    "tabTypes": [
-                        "PLAYER"
-                    ]
-                },
-                {
-                    "id": 442743,
-                    "type": "Song",
-                    "title": "Comfortably Numb (As Played By A 4 People Band, Without A Keyboardist Arrangement)",
-                    "artist": {
-                        "id": 79,
-                        "type": "Artist",
-                        "nameWithoutThePrefix": "Pink Floyd",
-                        "useThePrefix": false,
-                        "name": "Pink Floyd"
-                    },
-                    "chordsPresent": false,
-                    "tabTypes": [
-                        "PLAYER"
-                    ]
-                },
-                {
-                    "id": 357861,
-                    "type": "Song",
-                    "title": "Comfortably Numb (4 String Bass)",
-                    "artist": {
-                        "id": 79,
-                        "type": "Artist",
-                        "nameWithoutThePrefix": "Pink Floyd",
-                        "useThePrefix": false,
-                        "name": "Pink Floyd"
-                    },
-                    "chordsPresent": false,
-                    "tabTypes": [
-                        "PLAYER"
-                    ]
-                },
-                {
-                    "id": 406853,
-                    "type": "Song",
-                    "title": "Comfortably Numb Fingerstyle",
-                    "artist": {
-                        "id": 79,
-                        "type": "Artist",
-                        "nameWithoutThePrefix": "Pink Floyd",
-                        "useThePrefix": false,
-                        "name": "Pink Floyd"
-                    },
-                    "chordsPresent": false,
-                    "tabTypes": [
-                        "PLAYER"
-                    ]
-                },
-                {
-                    "id": 52921,
-                    "type": "Song",
-                    "title": "Comfortably Numb",
-                    "artist": {
-                        "id": 5121,
-                        "type": "Artist",
-                        "nameWithoutThePrefix": "Scissor Sisters",
-                        "useThePrefix": false,
-                        "name": "Scissor Sisters"
-                    },
-                    "chordsPresent": false,
-                    "tabTypes": [
-                        "PLAYER"
-                    ]
-                },
-                {
-                    "id": 383644,
-                    "type": "Song",
-                    "title": "Comfortably Numb (Pink Floyd Cover)",
-                    "artist": {
-                        "id": 16447,
-                        "type": "Artist",
-                        "nameWithoutThePrefix": "Cristian Gamarra Rey",
-                        "useThePrefix": false,
-                        "name": "Cristian Gamarra Rey"
-                    },
-                    "chordsPresent": false,
-                    "tabTypes": [
-                        "PLAYER"
-                    ]
-                },
-                {
-                    "id": 394874,
-                    "type": "Song",
-                    "title": "Comfortably Numb (Ddedu)",
-                    "artist": {
-                        "id": 79,
-                        "type": "Artist",
-                        "nameWithoutThePrefix": "Pink Floyd",
-                        "useThePrefix": false,
-                        "name": "Pink Floyd"
-                    },
-                    "chordsPresent": false,
-                    "tabTypes": [
-                        "PLAYER"
+                        "CHORDS"
                     ]
                 }
             ]

@@ -1,27 +1,39 @@
 {
     "calls": [
         {
-            "url": "https://love-calculator.p.rapidapi.com/getPercentage?fname=Matei&sname=iron+maiden",
-            "argument": "iron+maiden",
-            "latency": "426.47576332092285 ms",
+            "url": "https://love-calculator.p.rapidapi.com/getPercentage?fname=Matei&sname=Freddie+mercury",
+            "argument": "Freddie+mercury",
+            "latency": "25989.851713180542 ms",
             "status_code": 200,
             "response": {
                 "fname": "Matei",
-                "sname": "iron maiden",
+                "sname": "Freddie mercury",
                 "percentage": "99",
                 "result": "Congratulations! Good choice"
             }
         },
         {
-            "url": "https://love-calculator.p.rapidapi.com/getPercentage?fname=Matei&sname=pink+floyd",
-            "argument": "pink+floyd",
-            "latency": "458.83727073669434 ms",
+            "url": "https://love-calculator.p.rapidapi.com/getPercentage?fname=Matei&sname=the+weeknd",
+            "argument": "the+weeknd",
+            "latency": "469.2080020904541 ms",
             "status_code": 200,
             "response": {
                 "fname": "Matei",
-                "sname": "pink floyd",
-                "percentage": "53",
-                "result": "All the best!"
+                "sname": "the weeknd",
+                "percentage": "99",
+                "result": "Congratulations! Good choice"
+            }
+        },
+        {
+            "url": "https://love-calculator.p.rapidapi.com/getPercentage?fname=Matei&sname=metallica",
+            "argument": "metallica",
+            "latency": "3394.5095539093018 ms",
+            "status_code": 200,
+            "response": {
+                "fname": "Matei",
+                "sname": "metallica",
+                "percentage": "99",
+                "result": "Congratulations! Good choice"
             }
         }
     ]

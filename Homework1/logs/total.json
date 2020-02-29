@@ -1,24 +1,34 @@
 {
     "calls": [
         {
-            "url": "/select?artist=iron+maiden",
-            "argument": "iron+maiden",
-            "latency": "1660.50386428833 ms",
+            "url": "/select?artist=Freddie+mercury",
+            "argument": "Freddie+mercury",
+            "latency": "31649.94478225708 ms",
             "status_code": 200,
-            "response": "<!DOCTYPE html>\n<html lang = \"en\">\n\t<head>\n\t\t<title> Learning Songs </title>\n\t</head>\n\t<body>\n\t\t<h1> Which musician / band do you admire? </h1>\n\t\t<form action = \"/select\" method = \"get\">\n\t\t\t<input type = \"text\" name = \"artist\" placeholder = \"Enter the artist here...\">\n\t\t\t<input type = \"submit\" value = \"Submit\">\n\t\t</form>\n\t\t<br> <br>\n\t\t<h3> You can find metrics <a href = \"/metrics\"> HERE</a> !</h3>\n\t\t<h3> Also, you can find metrics for concurrent requests <a href = \"/conmetrics\"> HERE</a> !</h3>\n\t\t<h3> Results for the last call: </h3>\n\t\t<p> We chose song number 0 (Wasting Love) by <b>IRON MAIDEN</b> because you love this artist  99%! </p>\n\t\t<p> Learn the song <a href=http://www.songsterr.com/a/wa/song?id=10027>HERE</a> </p>\n\t</body>\n</html>",
-            "deezer_latency": "829.8602104187012 ms",
-            "random_latency": "426.47576332092285 ms",
-            "songsterr_latency": "394.1514492034912 ms"
+            "response": "<!DOCTYPE html>\n<html lang = \"en\">\n\t<head>\n\t\t<title> Learning Songs </title>\n\t</head>\n\t<body>\n\t\t<h1> Which musician / band do you admire? </h1>\n\t\t<form action = \"/select\" method = \"get\">\n\t\t\t<input type = \"text\" name = \"artist\" placeholder = \"Enter the artist here...\">\n\t\t\t<input type = \"submit\" value = \"Submit\">\n\t\t</form>\n\t\t<br> <br>\n\t\t<h3> You can find metrics <a href = \"/metrics\"> HERE</a> !</h3>\n\t\t<h3> Also, you can find metrics for concurrent requests <a href = \"/conmetrics\"> HERE</a> !</h3>\n\t\t<h3> Results for the last call: </h3>\n\t\t<p> We chose song number 24 (How Can I Go On) by <b>FREDDIE MERCURY</b> because you love this artist  99%! </p>\n\t\t<p> Sorry, we couldn't find a guitar tab for that song! </p>\n\t</body>\n</html>",
+            "deezer_latency": "4406.5186977386475 ms",
+            "random_latency": "25989.851713180542 ms",
+            "songsterr_latency": "1233.6313724517822 ms"
         },
         {
-            "url": "/select?artist=pink+floyd",
-            "argument": "pink+floyd",
-            "latency": "1338.057041168213 ms",
+            "url": "/select?artist=the+weeknd",
+            "argument": "the+weeknd",
+            "latency": "1364.6588325500488 ms",
             "status_code": 200,
-            "response": "<!DOCTYPE html>\n<html lang = \"en\">\n\t<head>\n\t\t<title> Learning Songs </title>\n\t</head>\n\t<body>\n\t\t<h1> Which musician / band do you admire? </h1>\n\t\t<form action = \"/select\" method = \"get\">\n\t\t\t<input type = \"text\" name = \"artist\" placeholder = \"Enter the artist here...\">\n\t\t\t<input type = \"submit\" value = \"Submit\">\n\t\t</form>\n\t\t<br> <br>\n\t\t<h3> You can find metrics <a href = \"/metrics\"> HERE</a> !</h3>\n\t\t<h3> Also, you can find metrics for concurrent requests <a href = \"/conmetrics\"> HERE</a> !</h3>\n\t\t<h3> Results for the last call: </h3>\n\t\t<p> We chose song number 3 (Comfortably Numb) by <b>PINK FLOYD</b> because you love this artist  53%! </p>\n\t\t<p> Learn the song <a href=http://www.songsterr.com/a/wa/song?id=271>HERE</a> </p>\n\t</body>\n</html>",
-            "deezer_latency": "478.6672592163086 ms",
-            "random_latency": "458.83727073669434 ms",
-            "songsterr_latency": "376.57999992370605 ms"
+            "response": "<!DOCTYPE html>\n<html lang = \"en\">\n\t<head>\n\t\t<title> Learning Songs </title>\n\t</head>\n\t<body>\n\t\t<h1> Which musician / band do you admire? </h1>\n\t\t<form action = \"/select\" method = \"get\">\n\t\t\t<input type = \"text\" name = \"artist\" placeholder = \"Enter the artist here...\">\n\t\t\t<input type = \"submit\" value = \"Submit\">\n\t\t</form>\n\t\t<br> <br>\n\t\t<h3> You can find metrics <a href = \"/metrics\"> HERE</a> !</h3>\n\t\t<h3> Also, you can find metrics for concurrent requests <a href = \"/conmetrics\"> HERE</a> !</h3>\n\t\t<h3> Results for the last call: </h3>\n\t\t<p> We chose song number 24 (Acquainted) by <b>THE WEEKND</b> because you love this artist  99%! </p>\n\t\t<p> Sorry, we couldn't find a guitar tab for that song! </p>\n\t</body>\n</html>",
+            "deezer_latency": "548.3174324035645 ms",
+            "random_latency": "469.2080020904541 ms",
+            "songsterr_latency": "313.26889991760254 ms"
+        },
+        {
+            "url": "/select?artist=metallica",
+            "argument": "metallica",
+            "latency": "5659.466743469238 ms",
+            "status_code": 200,
+            "response": "<!DOCTYPE html>\n<html lang = \"en\">\n\t<head>\n\t\t<title> Learning Songs </title>\n\t</head>\n\t<body>\n\t\t<h1> Which musician / band do you admire? </h1>\n\t\t<form action = \"/select\" method = \"get\">\n\t\t\t<input type = \"text\" name = \"artist\" placeholder = \"Enter the artist here...\">\n\t\t\t<input type = \"submit\" value = \"Submit\">\n\t\t</form>\n\t\t<br> <br>\n\t\t<h3> You can find metrics <a href = \"/metrics\"> HERE</a> !</h3>\n\t\t<h3> Also, you can find metrics for concurrent requests <a href = \"/conmetrics\"> HERE</a> !</h3>\n\t\t<h3> Results for the last call: </h3>\n\t\t<p> We chose song number 24 (The Unforgiven III) by <b>METALLICA</b> because you love this artist  99%! </p>\n\t\t<p> Learn the song <a href=http://www.songsterr.com/a/wa/song?id=22305>HERE</a> </p>\n\t</body>\n</html>",
+            "deezer_latency": "1513.5207176208496 ms",
+            "random_latency": "3394.5095539093018 ms",
+            "songsterr_latency": "701.5745639801025 ms"
         }
     ]
 }
