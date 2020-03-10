@@ -35,6 +35,18 @@
                 "percentage": "99",
                 "result": "Congratulations! Good choice"
             }
+        },
+        {
+            "url": "https://love-calculator.p.rapidapi.com/getPercentage?fname=Matei&sname=pink+floyd",
+            "argument": "pink+floyd",
+            "latency": "1057.8043460845947 ms",
+            "status_code": 200,
+            "response": {
+                "fname": "Matei",
+                "sname": "pink floyd",
+                "percentage": "53",
+                "result": "All the best!"
+            }
         }
     ]
 }
