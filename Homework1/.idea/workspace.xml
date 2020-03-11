@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8806ce09-439a-45dc-86f6-784bea04a8ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Homework2/ChordAPI/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework2/ChordAPI/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework2/ChordAPI/db_helper.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework2/ChordAPI/operations.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework2/ChordAPI/server.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/deezer.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/deezer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/random.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/random.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/songsterr.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/songsterr.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/total.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/total.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NodeJsTraining/project/model.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework2/ChordAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework2/ChordAPI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework2/ChordAPI/db_helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework2/ChordAPI/db_helper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework2/ChordAPI/operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework2/ChordAPI/operations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework2/ChordAPI/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework2/ChordAPI/server.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +19,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/concurrent_requests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
+            <state relative-caret-position="352">
               <caret line="22" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
@@ -37,8 +31,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="74" column="16" lean-forward="true" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="60" />
+            <state relative-caret-position="182">
+              <caret line="72" column="68" selection-start-line="72" selection-start-column="68" selection-end-line="72" selection-end-column="68" />
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
               </folding>
@@ -79,8 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/statistics.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="902">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -323,6 +317,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/concurrent_requests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/input/artists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -344,6 +348,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statistics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="902">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -375,30 +389,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/concurrent_requests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/statistics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="74" column="16" lean-forward="true" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="60" />
+        <state relative-caret-position="182">
+          <caret line="72" column="68" selection-start-line="72" selection-start-column="68" selection-end-line="72" selection-end-column="68" />
           <folding>
             <element signature="e#0#58#0" expanded="true" />
           </folding>
