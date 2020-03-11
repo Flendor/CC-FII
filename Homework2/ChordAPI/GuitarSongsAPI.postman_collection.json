@@ -1,0 +1,274 @@
+{
+	"info": {
+		"_postman_id": "84e14beb-c601-42a9-b21a-c0ee4fe80246",
+		"name": "GuitarSongsAPI",
+		"description": "CC Homework 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "GET Chord",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/chord/aminor",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"chord",
+								"aminor"
+							]
+						},
+						"description": "Get all the information about the requested chord, by name. The name is unique in the database, so the response will always represent a resource. Endpoint is: '/chord/{chord_name_without_spaces}'"
+					},
+					"response": []
+				},
+				{
+					"name": "GET Song by Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/song/name/babylon",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"song",
+								"name",
+								"babylon"
+							]
+						},
+						"description": "The response is a collection. More artist can have songs with the same name. A song has an id, a title, an artist and the chords in its componence. Endpoint is: '/song/name/{song_name}'"
+					},
+					"response": []
+				},
+				{
+					"name": "GET Song by Artist",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/song/artist/phoenix",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"song",
+								"artist",
+								"phoenix"
+							]
+						},
+						"description": "The response is a collection. An artist has more songs, usually. A song has an id, a title, an artist and the chords in its componence. Endpoint is: '/song/artist/{artist_name}'"
+					},
+					"response": []
+				},
+				{
+					"name": "GET Song by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/song/id/5",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"song",
+								"id",
+								"5"
+							]
+						},
+						"description": "The response is a resource. A song has an unique ID, a title, an artist and the chords in its componence. Endpoint is: '/song/id/{id}'"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "POST Chord",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"A SharpMinor\",\r\n    \"notes_in_chord\": \"A#2 F3 A#3 C#4 F4\",\r\n    \"index_finger_position\": \"Barre first 5 strings, 1st fret\",\r\n    \"middle_finger_position\": \"2nd string, 2nd fret\",\r\n    \"ring_finger_position\": \"3rd string, 3rd fret\",\r\n    \"pinkie_position\": \"4th string, 4th fret\",\r\n    \"thumb_position\": \"Behind neck, muting 6th string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/chord",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"chord"
+							]
+						},
+						"description": "Add a new chord in the database. Endpoint is: '/chord'"
+					},
+					"response": []
+				},
+				{
+					"name": "POST Song",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Derniere Danse\",\n\t\"artist\": \"Indila\",\n\t\"chords\": [\n\t\t\t\"a minor\",\n\t\t\t\"d minor\",\n\t\t\t\"c major\",\n\t\t\t\"e major\"\n\t\t]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/song",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"song"
+							]
+						},
+						"description": "Add a new song in the database. Endpoint is: '/song'"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "PUT",
+			"item": [
+				{
+					"name": "PUT Chord",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"A SharpMinor\",\r\n    \"notes_in_chord\": \"A#2 F3 A#3 C#4 F4 A#4\",\r\n    \"index_finger_position\": \"Barre all strings, 6th fret\",\r\n    \"middle_finger_position\": \"Relaxed\",\r\n    \"ring_finger_position\": \"5th string, 8th fret\",\r\n    \"pinkie_position\": \"5th string, 8th fret\",\r\n    \"thumb_position\": \"Behind neck, relaxed\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/chord/asharpminor",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"chord",
+								"asharpminor"
+							]
+						},
+						"description": "Update an existing chord, but all information is required. Endpoint is: '/chord/{chord_name_without_spaces}'"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Song",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Farewell\",\n\t\"artist\": \"Avantasia\",\n\t\"chords\": [\n\t\t\t\"a minor\",\n\t\t\t\"d minor\",\n\t\t\t\"c major\",\n\t\t\t\"f major\",\n\t\t\t\"G 7\",\n\t\t\t\"E MINOR\"\n\t\t]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/song/id/10",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"song",
+								"id",
+								"10"
+							]
+						},
+						"description": "Update song information. All data is needed. Endpoint is:\n'/song/id/{id}'"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "DELETE",
+			"item": [
+				{
+					"name": "DELETE Chord",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/chord/asharpminor",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"chord",
+								"asharpminor"
+							]
+						},
+						"description": "Remove a chord by it's name. Endpoint is: '/chord/{chord_name_without_spaces}'"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Song",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/song/id/10",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"song",
+								"id",
+								"10"
+							]
+						},
+						"description": "Remove a song by it's ID. Endpoint is: '/song/id/{id}'"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

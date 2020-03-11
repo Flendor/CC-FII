@@ -9,6 +9,7 @@ import json
 
 
 conn = sqlite3.connect("chord.db")
+conn.execute("PRAGMA foreign_keys=ON")
 
 
 class Server(BaseHTTPRequestHandler):

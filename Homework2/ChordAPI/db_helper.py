@@ -128,7 +128,7 @@ def insert_chord_into_db(conn, body):
                             body['ring_finger_position'], body['pinkie_position'], body['thumb_position']))
     conn.commit()
     response_dict = dict()
-    response_dict['Response'] = 'localhost:9090/chord/' + body['name']
+    response_dict['Response'] = 'localhost:9090/chord/' + body['name'].replace(' ', '')
     return response_dict, 201
 
 
@@ -182,7 +182,7 @@ def update_chord_in_db(conn, body, chord):
                 body['ring_finger_position'], body['pinkie_position'], body['thumb_position'], result[0][0]))
     conn.commit()
     response_dict = dict()
-    response_dict['Response'] = 'localhost:9090/chord/' + body['name']
+    response_dict['Response'] = 'localhost:9090/chord/' + body['name'].replace(' ', '')
     return response_dict, 200
 
 
@@ -228,7 +228,7 @@ def delete_chord_from_db(conn, chord):
         return response_dict, 404
 
     c2 = conn.cursor()
-    statement2 = 'delete from chords where name = ?'
+    statement2 = 'delete from chords where lower(name) = lower(?)'
     c2.execute(statement2, (chord, ))
     conn.commit()
     response_dict = dict()
@@ -242,7 +242,7 @@ def delete_song_from_db(conn, sid):
     c1.execute(statement, (sid,))
     result = c1.fetchall()
     if len(result) == 0:
-        response_dict = {"Response": "Cannot find song with id: " + sid}
+        response_dict = {"Response": "Cannot find song with id: " + str(sid)}
         return response_dict, 404
 
     c2 = conn.cursor()

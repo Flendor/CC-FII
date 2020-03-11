@@ -22,7 +22,6 @@ def get_sid_from_url(url):
 
 
 def is_chord_body_valid(body):
-    print(body)
     if "notes_in_chord" not in body.keys() or "name" not in body.keys() or "index_finger_position" not in body.keys() \
             or "middle_finger_position" not in body.keys() or "ring_finger_position" not in body.keys() \
             or "pinkie_position" not in body.keys() or "thumb_position" not in body.keys():
