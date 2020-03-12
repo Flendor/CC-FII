@@ -193,7 +193,7 @@ class Server(BaseHTTPRequestHandler):
                 self.send_header('Content-type', 'application/json')
                 self.end_headers()
                 response_dict = dict()
-                response_dict['Response'] = 'Body is not valid!'
+                response_dict['Response'] = 'Body is not valid or complete!'
                 self.wfile.write(bytes(json.dumps(response_dict), 'utf-8'))
         else:
             response = {"Response": "Bad url"}
