@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+	<link rel="stylesheet" type="text/css" href="static/register.css">
+</head>
+<body>
+<form method="POST">
+	<div class = "formbox">
+		<h1>SIGN UP to Converter Storage</h1>
+		<input name="username" type="text" placeholder="Email" class="data">
+		<input name="password" type="password" placeholder="Password" class="data">
+		<input name="passwordConfirm" type="password" placeholder="Confirm password" class="data">
+		<button type="submit" class="btn">Register</button>
+		<p> Go back to <a href="/"><u style="color:#AAAAAA;"><b>Login page!</b></u></a>
+		<p style="color:red">{{used_data_error}}</p>
+		<p style="color:red">{{passwords_error}}</p>
+		<p style="color:red">{{short_password_error}}</p>
+	</div>
+</form>
+
+</body>
+</html>
