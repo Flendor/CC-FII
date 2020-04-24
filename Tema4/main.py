@@ -22,7 +22,8 @@ photos_collection = db['']
 
 blob_service = BlockBlobService(account_name="", account_key="")
 
-computervision_client = ComputerVisionClient(endpoint="", credentials="")
+computervision_client = ComputerVisionClient(endpoint="",
+                                             credentials="")
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -67,36 +68,46 @@ def store_search():
     if 'user' not in session:
         return redirect('/')
     if request.method == 'POST':
-        if request.files:
-            file_to_upload = request.files["file"]
-            extension = os.path.splitext(file_to_upload.filename)[1]
-            name = os.path.splitext(file_to_upload.filename)[0]
-            if extension.lower() not in ['.jpg', '.png', '.bmp', '.jpeg']:
-                return render_template('file_storage.html', upload_error="You have to choose a photo!", username=session['user'])
+        if request.form['start'] == "Search":
+            if request.form['search'] == "":
+                return render_template('file_storage.html', no_photos="No results!", images=[], len=0, username=session['user'])
+            urls = search(request.form['search'])
+            if len(urls) == 0:
+                return render_template('file_storage.html', no_photos="No results!", images=[], len=0, username=session['user'])
+            return render_template('file_storage.html', images=urls, len=len(urls), username=session['user'])
+        else:
+            if request.files:
+                file_to_upload = request.files["file"]
+                extension = os.path.splitext(file_to_upload.filename)[1]
+                name = os.path.splitext(file_to_upload.filename)[0]
+                if extension.lower() not in ['.jpg', '.png', '.bmp', '.jpeg']:
+                    return render_template('file_storage.html', images=[], len=0,
+                                           upload_error="You have to choose a photo!", username=session['user'])
 
-            generator = blob_service.list_blobs("photos")
-            if session['user'] + "/" + file_to_upload.filename in [blob.name for blob in generator]:
-                return render_template('file_storage.html', upload_error="You have already a photo with the same name!", username=session['user'])
+                generator = blob_service.list_blobs("photos")
+                if session['user'] + "/" + file_to_upload.filename in [blob.name for blob in generator]:
+                    return render_template('file_storage.html', images=[], len=0,
+                                           upload_error="You have already a photo with the same name!", username=session['user'])
 
-            blob_service.create_blob_from_stream("photos", session['user'] + "/" + file_to_upload.filename, file_to_upload.stream)
-            ref = 'https://' + "" + '.blob.core.windows.net/' + "photos" + '/' + session['user'] + "/" + file_to_upload.filename
-            description_results = computervision_client.describe_image(ref)
-            description = ""
-            if len(description_results.captions) == 0:
-                description = "No description detected."
-            else:
-                for caption in description_results.captions:
-                    info = caption.text[0].upper() + caption.text[1:]
-                    description = info + "\n"
+                blob_service.create_blob_from_stream("photos", session['user'] + "/" + file_to_upload.filename, file_to_upload.stream)
+                ref = 'https://' + "" + '.blob.core.windows.net/' + "photos" + '/' + session['user'] + "/" + file_to_upload.filename
+                description_results = computervision_client.describe_image(ref)
+                description = ""
+                if len(description_results.captions) == 0:
+                    description = "No description detected."
+                else:
+                    for caption in description_results.captions:
+                        info = caption.text[0].upper() + caption.text[1:]
+                        description = info + "\n"
 
-            language = request.form.get('language')
-            result = translate(description, language)[0]['translations'][0]['text']
+                language = request.form.get('language')
+                result = translate(description, language)[0]['translations'][0]['text']
 
-            new_photo = {"photo_name": file_to_upload.filename, "user": session['user'], "tags": str(description_results.tags)}
-            photo_id = photos_collection.insert_one(new_photo).inserted_id
-            return render_template('file_storage.html', image_url=ref, photo_description=result, username=session['user'])
+                new_photo = {"photo_name": file_to_upload.filename, "user": session['user'], "tags": str(description_results.tags)}
+                photo_id = photos_collection.insert_one(new_photo).inserted_id
+                return render_template('file_storage.html', images=[], len=0, image_url=ref, photo_description=result, username=session['user'])
 
-    return render_template('file_storage.html', username=session['user'])
+    return render_template('file_storage.html', images=[], len=0, username=session['user'])
 
 
 def translate(text, lang):
@@ -115,6 +126,54 @@ def translate(text, lang):
     }]
     response = requests.post(constructed_url, headers=headers, json=body)
     return response.json()
+
+
+def search(words):
+    words = words.split(" ")
+    result = []
+    photos = photos_collection.find({"user": session['user']})
+    for photo in photos:
+        tags = photo['tags']
+        for word in words:
+            if word in tags:
+                ref = 'https://' + "" + '.blob.core.windows.net/' + "photos" + '/' + session['user'] + "/" + photo['photo_name']
+                result.append(ref)
+    return result
+
+
+@app.route("/storage/deletePhoto", methods=["POST"])
+def deletePhoto():
+    print(request.form['submitButton'])
+    name = request.form['submitButton'].split("/")
+    name = name[len(name) - 1]
+    blob_service.delete_blob("photos", session['user'] + "/" + name)
+    try:
+        photos_collection.delete_one({"photo_name": name, "user": session["user"]})
+    except Exception as e:
+        print(e)
+    return redirect("/storage")
+
+
+@app.route('/logout', methods=['POST', 'GET'])
+def logout():
+    try:
+        del session['user']
+    except Exception as e:
+        print(e)
+    return redirect("/")
+
+
+@app.route('/deleteAccount', methods=['POST', "GET"])
+def delete_account():
+    url = ''
+    body = {
+        'username': session['user']
+    }
+    response = requests.post(url, json=body)
+    if response.status_code == 200:
+        del session['user']
+        return redirect("/")
+    return redirect("/storage")
 
 
 if __name__ == '__main__':

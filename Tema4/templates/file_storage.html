@@ -9,8 +9,40 @@
 
 <p>{{username}}</p>
 <a href="/logout" class="logoutBtn"> Logout</a>
+<a href="/deleteAccount" class="deleteAcc">Delete your account</a>
 <br><br>
 <hr>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+
+      <h1>Search a photo</h1>
+
+      <form method="POST" enctype="multipart/form-data">
+          <input type="text" name="search" placeholder="Search...">
+          <input type="submit" name="start" value="Search">
+      </form>
+
+        <p>{{no_photos}}</p>
+
+        <ul style="list-style-type:none;">
+            {%for i in range(0, len)%}
+          <li>
+            <img src={{images[i]}}>
+            <form method = "POST" action="/storage/deletePhoto" enctype="multipart/form-data">
+				<div class="buttons">
+					<button type="submit" name="submitButton" value="{{images[i]}}" class="btn3">Delete photo</button>
+				</div>
+            </form>
+              <br>
+          </li>
+        {%endfor%}
+      </ul>
+        <hr>
+    </div>
+  </div>
+</div>
 
 <div class="container1">
   <div class="row">
@@ -37,7 +69,7 @@
 			</select>
         </div>
 
-        <button type="submit" class="uploadBtn">Upload</button>
+        <input type="submit" class="uploadBtn" name="start" value="Upload">
 
       </form>
 
