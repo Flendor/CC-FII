@@ -23,7 +23,7 @@ photos_collection = db['']
 blob_service = BlockBlobService(account_name="", account_key="")
 
 computervision_client = ComputerVisionClient(endpoint="",
-                                             credentials="")
+                                             credentials=CognitiveServicesCredentials(""))
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -93,17 +93,21 @@ def store_search():
                 ref = 'https://' + "" + '.blob.core.windows.net/' + "photos" + '/' + session['user'] + "/" + file_to_upload.filename
                 description_results = computervision_client.describe_image(ref)
                 description = ""
+                translated_tags = ""
                 if len(description_results.captions) == 0:
                     description = "No description detected."
                 else:
                     for caption in description_results.captions:
                         info = caption.text[0].upper() + caption.text[1:]
-                        description = info + "\n"
+                        description = info + '<br/>'
 
                 language = request.form.get('language')
                 result = translate(description, language)[0]['translations'][0]['text']
+                for tag in description_results.tags[:6]:
+                    translated_tags += tag + " = " + translate(tag, language)[0]['translations'][0]['text'] + '<br/>'
+                result += '<br/>' + translated_tags
 
-                new_photo = {"photo_name": file_to_upload.filename, "user": session['user'], "tags": str(description_results.tags)}
+                new_photo = {"photo_name": file_to_upload.filename, "user": session['user'], "tags": str(description_results.tags[:6])}
                 photo_id = photos_collection.insert_one(new_photo).inserted_id
                 return render_template('file_storage.html', images=[], len=0, image_url=ref, photo_description=result, username=session['user'])
 
@@ -115,7 +119,6 @@ def translate(text, lang):
     path = '/translate?api-version=3.0'
     params = '&to=' + lang
     constructed_url = base_url + path + params
-
     headers = {
         'Ocp-Apim-Subscription-Key': "",
         'Content-type': 'application/json'
@@ -129,20 +132,23 @@ def translate(text, lang):
 
 
 def search(words):
-    words = words.split(" ")
+    print(translate(words, 'en'))
+    translated_words = translate(words, 'en')[0]['translations'][0]['text']
+    print(translated_words)
+    translated_words = translated_words.split(" ")
     result = []
     photos = photos_collection.find({"user": session['user']})
     for photo in photos:
         tags = photo['tags']
-        for word in words:
-            if word in tags:
+        for word in translated_words:
+            if word.lower() in tags:
                 ref = 'https://' + "" + '.blob.core.windows.net/' + "photos" + '/' + session['user'] + "/" + photo['photo_name']
                 result.append(ref)
     return result
 
 
 @app.route("/storage/deletePhoto", methods=["POST"])
-def deletePhoto():
+def delete_photo():
     print(request.form['submitButton'])
     name = request.form['submitButton'].split("/")
     name = name[len(name) - 1]
@@ -174,7 +180,3 @@ def delete_account():
         del session['user']
         return redirect("/")
     return redirect("/storage")
-
-
-if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=8090, debug=True)

@@ -72,6 +72,7 @@ p{
   border: #000000 2px solid;
   font-weight:800;
   font-size:1.0em;
+  margin-right:30px;
 }
 
 .deleteAcc{
@@ -84,6 +85,7 @@ p{
   border: #000000 2px solid;
   font-weight:800;
   font-size:1.0em;
+  margin-left:30px;
 }
 
 .formbox{

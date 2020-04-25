@@ -80,6 +80,10 @@
 <p style="color:red">{{upload_error}}</p>
 
 <img src={{image_url}}>
-<p>{{photo_description}}</p>
+<p>
+    {%autoescape false%}
+        {{photo_description}}
+    {%endautoescape%}
+</p>
 </body>
 </html>
