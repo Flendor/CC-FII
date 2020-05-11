@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.2)  11 MAY 2020 11:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.2)  11 MAY 2020 12:20
 entering extended mode
 **./report.tex
 (report.tex
@@ -367,18 +367,18 @@ Overfull \hbox (6.20628pt too wide) in paragraph at lines 58--59
 mite sto-carea fi[]ierelor cu anun[]uri ^ncarcate
  []
 
-<businessCanvas.png, id=11, 1056.94875pt x 554.67226pt>
+<businessCanvas.png, id=11, 909.99976pt x 532.389pt>
 File: businessCanvas.png Graphic file (type png)
 <use businessCanvas.png>
 Package pdftex.def Info: businessCanvas.png  used on input line 67.
-(pdftex.def)             Requested size: 455.24411pt x 238.9022pt.
+(pdftex.def)             Requested size: 432.48051pt x 253.0255pt.
 [2]
-<use_case.jpg, id=16, 679.53876pt x 522.95375pt>
+<use_case.jpg, id=17, 679.53876pt x 522.95375pt>
 File: use_case.jpg Graphic file (type jpg)
 <use use_case.jpg>
 Package pdftex.def Info: use_case.jpg  used on input line 74.
-(pdftex.def)             Requested size: 409.71692pt x 315.30675pt.
-<architectural.png, id=17, 814.04124pt x 581.17125pt>
+(pdftex.def)             Requested size: 386.96027pt x 297.79149pt.
+<architectural.png, id=18, 814.04124pt x 581.17125pt>
 File: architectural.png Graphic file (type png)
 <use architectural.png>
 Package pdftex.def Info: architectural.png  used on input line 81.
@@ -404,9 +404,9 @@ C:/Users/Matei/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /amsfonts/cm/cmr6.pfb><C:/Users/Matei/AppData/Local/Programs/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/cm/cmr7.pfb><C:/Users/Matei/AppData/Local/Programs/MiKTeX 
 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on report.pdf (4 pages, 340318 bytes).
+Output written on report.pdf (4 pages, 352234 bytes).
 PDF statistics:
- 48 PDF objects out of 1000 (max. 8388607)
+ 49 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
