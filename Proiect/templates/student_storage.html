@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Store & Search</title>
+	<link rel="stylesheet" type="text/css" href="static/storage.css">
+</head>
+<body>
+
+<p>{{user_email}}</p>
+<a href="/logout" class="logoutBtn"> Logout</a>
+<br><br>
+<hr>
+
+<div class="container1">
+  <div class="row">
+    <div class="col">
+
+      <h1>Upload a .mp3 or .txt file (in English)!</h1>
+      <hr>
+
+      <form method="POST" enctype="multipart/form-data">
+
+        <div class="formbox">
+			<p>Select a file...</p>
+			<input type="file" name="file" id="file" class="inputfile">
+        </div>
+
+          <p>Subject: </p>
+            <select name="subject">
+                {%for i in range(0, len_subjects)%}
+			        <option value ="{{subjects[i]}}">{{subjects[i]}}</option>
+                {%endfor%}
+			</select>
+
+          <p>Teacher: </p>
+            <select name="teacher">
+                {%for i in range(0, len_teachers)%}
+			        <option value ="{{teachers[i]}}">{{teachers[i]}}</option>
+                {%endfor%}
+			</select>
+
+          <br>
+        <button type="submit" class="uploadBtn">Upload</button>
+
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<p style="color:red">{{upload_error}}</p>
+
+<div class="container2">
+  <div class="row">
+    <div class="col">
+
+      <h1>Your files:</h1>
+      <hr>
+      <ul style="list-style-type:none;">
+        {%for i in range(0, len)%}
+          <li>
+            <p class="name"><b>{{names[i]}}</b></p>
+            <form method = "POST" action="/storage/actionFile" enctype="multipart/form-data">
+				<div class="buttons">
+					<button type="submit" name="submitButton" value="mp3Download+{{file_names[i]}}.mp3" class="btn1">Download as mp3 file</button>
+					<button type="submit" name="submitButton" value="textDownload+{{file_names[i]}}.txt" class="btn2">Download as text file</button>
+					<button type="submit" name="submitButton" value="deleteFile+{{file_names[i]}}.txt" class="btn3">Delete file</button>
+				</div>
+            </form>
+          </li>
+        {%endfor%}
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container2">
+  <div class="row">
+    <div class="col">
+
+      <h1>Files from your teachers:</h1>
+      <hr>
+      <ul style="list-style-type:none;">
+        {%for i in range(0, len2)%}
+          <li>
+            <p class="name"><b>{{names2[i]}}</b></p>
+            <form method = "POST" action="/storage/actionFile" enctype="multipart/form-data">
+				<div class="buttons">
+					<button type="submit" name="submitButton" value="mp3Download+{{file_names2[i]}}.mp3" class="btn1">Download as mp3 file</button>
+					<button type="submit" name="submitButton" value="textDownload+{{file_names2[i]}}.txt" class="btn2">Download as text file</button>
+				</div>
+            </form>
+          </li>
+        {%endfor%}
+      </ul>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

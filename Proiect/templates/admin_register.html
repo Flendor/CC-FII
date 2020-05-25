@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register students and teachers</title>
+	<link rel="stylesheet" type="text/css" href="static/admin_register.css">
+</head>
+<body>
+<p>{{user_email}}</p>
+<a href="/logout" class="logoutBtn"> Logout</a>
+<br><br>
+<hr>
+<form method="POST">
+	<div class = "formbox">
+		<h1 class="greyColor">SIGN UP students and teachers</h1>
+		<input name="email" type="text" placeholder="Email" class="data">
+		<input name="first_name" type="text" placeholder="First Name" class="data">
+        <input name="last_name" type="text" placeholder="Last Name" class="data">
+        <p>Account type:</p>
+			<select name="type">
+			<option value ="student">Student</option>
+			<option value ="teacher">Teacher</option>
+			</select>
+        <p>Choose subjects:</p>
+        {%for i in range(0, len_subjects)%}
+            <div>
+                <input type="checkbox" id="{{subjects[i]}}" name="subject" value="{{subjects[i]}}">
+                <label for="{{subjects[i]}}" class="greyColor">{{subjects[i]}}</label>
+            </div>
+        {%endfor%}
+        <input name="group" type="text" placeholder="Student group" class="data">
+		<button type="submit" class="btn">Register</button>
+		<p style="color:red">{{used_data_error}}</p>
+		<p style="color:red">{{null_data_error}}</p>
+	</div>
+</form>
+
+<div class="container2">
+
+      <h1>Registered users:</h1>
+      <hr>
+      <ul style="list-style-type:none;">
+        {%for i in range(0, len)%}
+          <li>
+            <p class="name"><b>{{names[i]}}</b></p>
+            <form method = "POST" action="/storage/deleteAccount" enctype="multipart/form-data">
+				<div class="buttons">
+					<button type="submit" name="submitButton" value="{{uids[i]}}" class="btn3">Delete account</button>
+				</div>
+            </form>
+          </li>
+        {%endfor%}
+      </ul>
+</div>
+
+</body>
+</html>
