@@ -201,17 +201,20 @@ def create_accounts_as_admin(request, user):
         group = request.form['group']
         if email == "" or firstName == "" or lastName == "" or acc_type == "" or selected_subjects == []:
             return render_template('admin_register.html', null_data_error="All fields are mandatory!",
-                                   user_email=user['users'][0]['email'], len_subjects=len(subjects), subjects=subjects)
+                                   user_email=user['users'][0]['email'], len_subjects=len(subjects), subjects=subjects,
+                                   len=len(account_names), names=account_names, uids=account_uids)
         elif acc_type == "student" and group == "":
             return render_template('admin_register.html', null_data_error="All fields are mandatory!",
-                                   user_email=user['users'][0]['email'], len_subjects=len(subjects), subjects=subjects)
+                                   user_email=user['users'][0]['email'], len_subjects=len(subjects), subjects=subjects,
+                                   len=len(account_names), names=account_names, uids=account_uids)
         try:
             new_acc = firebase_auth.create_user_with_email_and_password(email, firstName[:3] + lastName[:3] + "2020")
             firebase_auth.send_email_verification(new_acc['idToken'])
         except Exception as e:
             print(e)
             return render_template('admin_register.html', used_data_error="Email already in use!",
-                                   user_email=user['users'][0]['email'], len_subjects=len(subjects), subjects=subjects)
+                                   user_email=user['users'][0]['email'], len_subjects=len(subjects), subjects=subjects,
+                                   len=len(account_names), names=account_names, uids=account_uids)
 
         if acc_type == 'student':
             student_entity = datastore.Entity(key=data_store.key('students'))
@@ -355,7 +358,7 @@ def student_storage(request, user):
                 extension = os.path.splitext(file_to_upload.filename)[1]
                 name = os.path.splitext(file_to_upload.filename)[0]
                 if extension not in ['.txt', '.mp3']:
-                    return render_template('teacher_storage.html', len=len(my_files), names=my_files,
+                    return render_template('student_storage.html', len=len(my_files), names=my_files,
                                            file_names=real_files,
                                            upload_error="You have to choose a txt or mp3 file!",
                                            user_email=user['users'][0]['email'],
@@ -364,7 +367,7 @@ def student_storage(request, user):
                                            len2=len(teacher_files), names2=teacher_files,
                                            file_names2=teacher_real_files)
                 if name in my_files:
-                    return render_template('teacher_storage.html', len=len(my_files), names=my_files,
+                    return render_template('student_storage.html', len=len(my_files), names=my_files,
                                            file_names=real_files,
                                            upload_error="You have already a file with this name!",
                                            user_email=user['users'][0]['email'],
@@ -375,7 +378,17 @@ def student_storage(request, user):
                 uid = user['users'][0]['localId']
                 subject = request.form['subject']
                 teacher = request.form['teacher']
-                new_file_path = session['user_inst'] + "/" + subject + "/" + teachers_tokens[teachers.index(teacher)] \
+                teacher_uid = teachers_tokens[teachers.index(teacher)]
+                if not check_subject_teacher_relation(teacher_uid, subject) and teacher != 'All':
+                    return render_template('student_storage.html', len=len(my_files), names=my_files,
+                                           file_names=real_files,
+                                           upload_error="Wrong teacher - subject pair!",
+                                           user_email=user['users'][0]['email'],
+                                           len_subjects=len(subjects), subjects=subjects,
+                                           len_teachers=len(teachers), teachers=teachers,
+                                           len2=len(teacher_files), names2=teacher_files,
+                                           file_names2=teacher_real_files)
+                new_file_path = session['user_inst'] + "/" + subject + "/" + teacher_uid \
                                 + "/" + file_to_upload.filename
                 file_url = firebase_storage.child(new_file_path).put(file_to_upload, session['user'])
                 entity1 = datastore.Entity(key=data_store.key('file-token'))
@@ -417,7 +430,7 @@ def student_storage(request, user):
             except Exception as e:
                 print(e)
                 delete_file(file_to_upload.filename)
-                return render_template('teacher_storage.html', len=len(my_files), names=my_files, file_names=real_files,
+                return render_template('student_storage.html', len=len(my_files), names=my_files, file_names=real_files,
                                        upload_error="The file is too big.",
                                        user_email=user['users'][0]['email'],
                                        len_subjects=len(subjects), subjects=subjects, len_teachers=len(teachers),
@@ -429,6 +442,21 @@ def student_storage(request, user):
                            file_names=real_files,
                            len_subjects=len(subjects), subjects=subjects, len_teachers=len(teachers), teachers=teachers,
                            len2=len(teacher_files), names2=teacher_files, file_names2=teacher_real_files)
+
+
+def check_subject_teacher_relation(teacher, subject):
+    query = data_store.query(kind="subject")
+    query.add_filter("name", "=", subject)
+    query.add_filter("institution_name", "=", session['user_inst'])
+    subject_id = ''
+    for result in query.fetch(limit=1):
+        subject_id = result.key.id
+    query = data_store.query(kind="teacher-subject-relation")
+    query.add_filter("subject_id", '=', subject_id)
+    for result in query.fetch():
+        if teacher == result['user_token']:
+            return True
+    return False
 
 
 def get_subjects(uid):
@@ -680,6 +708,8 @@ def logout():
     try:
         firebase_auth.current_user = None
         del session['user']
+        del session['user_type']
+        del session['user_inst']
     except Exception as e:
         print(e)
     return redirect("/")
